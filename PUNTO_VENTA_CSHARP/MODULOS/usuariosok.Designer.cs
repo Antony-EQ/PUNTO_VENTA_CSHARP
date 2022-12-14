@@ -30,9 +30,9 @@ namespace PUNTO_VENTA_CSHARP
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(usuariosok));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,6 +44,7 @@ namespace PUNTO_VENTA_CSHARP
             this.datalistado = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblnumeroicono = new System.Windows.Forms.Label();
             this.panelICONO = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -75,7 +76,8 @@ namespace PUNTO_VENTA_CSHARP
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.lblnumeroicono = new System.Windows.Forms.Label();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.lblId_usuarrio = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -182,7 +184,7 @@ namespace PUNTO_VENTA_CSHARP
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(619, 109);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(125, 493);
+            this.panel3.Size = new System.Drawing.Size(125, 520);
             this.panel3.TabIndex = 2;
             // 
             // pictureBox1
@@ -200,30 +202,32 @@ namespace PUNTO_VENTA_CSHARP
             // 
             this.datalistado.AllowUserToAddRows = false;
             this.datalistado.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.datalistado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.datalistado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.datalistado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datalistado.BackgroundColor = System.Drawing.Color.White;
             this.datalistado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.datalistado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.datalistado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datalistado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.datalistado.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datalistado.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datalistado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.datalistado.ColumnHeadersHeight = 25;
+            this.datalistado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Eliminar});
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datalistado.DefaultCellStyle = dataGridViewCellStyle12;
             this.datalistado.Dock = System.Windows.Forms.DockStyle.Fill;
             this.datalistado.EnableHeadersVisualStyles = false;
             this.datalistado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -231,7 +235,7 @@ namespace PUNTO_VENTA_CSHARP
             this.datalistado.Name = "datalistado";
             this.datalistado.RowHeadersVisible = false;
             this.datalistado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datalistado.Size = new System.Drawing.Size(619, 493);
+            this.datalistado.Size = new System.Drawing.Size(619, 520);
             this.datalistado.TabIndex = 3;
             this.datalistado.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.datalistado.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -246,7 +250,7 @@ namespace PUNTO_VENTA_CSHARP
             this.datalistado.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.datalistado.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.datalistado.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.datalistado.ThemeStyle.HeaderStyle.Height = 4;
+            this.datalistado.ThemeStyle.HeaderStyle.Height = 25;
             this.datalistado.ThemeStyle.ReadOnly = false;
             this.datalistado.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.datalistado.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -255,20 +259,23 @@ namespace PUNTO_VENTA_CSHARP
             this.datalistado.ThemeStyle.RowsStyle.Height = 22;
             this.datalistado.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datalistado.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.datalistado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datalistado_CellContentClick);
+            this.datalistado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datalistado_CellDoubleClick);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.guna2Panel2);
-            this.panel4.Location = new System.Drawing.Point(3, 129);
+            this.panel4.Location = new System.Drawing.Point(0, 171);
             this.panel4.Name = "panel4";
             this.panel4.ShadowDecoration.Parent = this.panel4;
-            this.panel4.Size = new System.Drawing.Size(674, 461);
+            this.panel4.Size = new System.Drawing.Size(744, 471);
             this.panel4.TabIndex = 2;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
+            this.guna2Panel2.Controls.Add(this.lblId_usuarrio);
             this.guna2Panel2.Controls.Add(this.lblnumeroicono);
             this.guna2Panel2.Controls.Add(this.panelICONO);
             this.guna2Panel2.Controls.Add(this.LblAnuncioIcono);
@@ -291,11 +298,20 @@ namespace PUNTO_VENTA_CSHARP
             this.guna2Panel2.Controls.Add(this.gunaLabel2);
             this.guna2Panel2.Controls.Add(this.gunaLabel1);
             this.guna2Panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Panel2.Location = new System.Drawing.Point(9, 40);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(689, 298);
+            this.guna2Panel2.Size = new System.Drawing.Size(741, 536);
             this.guna2Panel2.TabIndex = 0;
+            // 
+            // lblnumeroicono
+            // 
+            this.lblnumeroicono.AutoSize = true;
+            this.lblnumeroicono.Location = new System.Drawing.Point(616, 216);
+            this.lblnumeroicono.Name = "lblnumeroicono";
+            this.lblnumeroicono.Size = new System.Drawing.Size(51, 20);
+            this.lblnumeroicono.TabIndex = 18;
+            this.lblnumeroicono.Text = "label2";
             // 
             // panelICONO
             // 
@@ -303,10 +319,10 @@ namespace PUNTO_VENTA_CSHARP
             this.panelICONO.Controls.Add(this.guna2PictureBox2);
             this.panelICONO.Controls.Add(this.flowLayoutPanel2);
             this.panelICONO.Controls.Add(this.flowLayoutPanel1);
-            this.panelICONO.Location = new System.Drawing.Point(3, 25);
+            this.panelICONO.Location = new System.Drawing.Point(91, 300);
             this.panelICONO.Name = "panelICONO";
             this.panelICONO.ShadowDecoration.Parent = this.panelICONO;
-            this.panelICONO.Size = new System.Drawing.Size(649, 273);
+            this.panelICONO.Size = new System.Drawing.Size(653, 236);
             this.panelICONO.TabIndex = 1;
             // 
             // guna2PictureBox2
@@ -467,6 +483,7 @@ namespace PUNTO_VENTA_CSHARP
             this.btnVolver.Size = new System.Drawing.Size(139, 44);
             this.btnVolver.TabIndex = 14;
             this.btnVolver.Text = "Volver";
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnGuardarCambios
             // 
@@ -475,12 +492,13 @@ namespace PUNTO_VENTA_CSHARP
             this.btnGuardarCambios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuardarCambios.ForeColor = System.Drawing.Color.White;
             this.btnGuardarCambios.HoverState.Parent = this.btnGuardarCambios;
-            this.btnGuardarCambios.Location = new System.Drawing.Point(245, 250);
+            this.btnGuardarCambios.Location = new System.Drawing.Point(100, 250);
             this.btnGuardarCambios.Name = "btnGuardarCambios";
             this.btnGuardarCambios.ShadowDecoration.Parent = this.btnGuardarCambios;
             this.btnGuardarCambios.Size = new System.Drawing.Size(167, 44);
             this.btnGuardarCambios.TabIndex = 14;
             this.btnGuardarCambios.Text = "Guardar Cambios";
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
             // 
             // btnGuardar
             // 
@@ -714,21 +732,28 @@ namespace PUNTO_VENTA_CSHARP
             this.gunaLabel1.TabIndex = 0;
             this.gunaLabel1.Text = "Nombres y Apellidos:";
             // 
-            // lblnumeroicono
+            // Eliminar
             // 
-            this.lblnumeroicono.AutoSize = true;
-            this.lblnumeroicono.Location = new System.Drawing.Point(616, 216);
-            this.lblnumeroicono.Name = "lblnumeroicono";
-            this.lblnumeroicono.Size = new System.Drawing.Size(51, 20);
-            this.lblnumeroicono.TabIndex = 18;
-            this.lblnumeroicono.Text = "label2";
+            this.Eliminar.HeaderText = "";
+            this.Eliminar.Image = ((System.Drawing.Image)(resources.GetObject("Eliminar.Image")));
+            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Eliminar.Name = "Eliminar";
+            // 
+            // lblId_usuarrio
+            // 
+            this.lblId_usuarrio.AutoSize = true;
+            this.lblId_usuarrio.Location = new System.Drawing.Point(672, 38);
+            this.lblId_usuarrio.Name = "lblId_usuarrio";
+            this.lblId_usuarrio.Size = new System.Drawing.Size(51, 20);
+            this.lblId_usuarrio.TabIndex = 19;
+            this.lblId_usuarrio.Text = "label2";
             // 
             // usuariosok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(744, 602);
+            this.ClientSize = new System.Drawing.Size(744, 629);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.datalistado);
             this.Controls.Add(this.panel3);
@@ -736,6 +761,7 @@ namespace PUNTO_VENTA_CSHARP
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "usuariosok";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.usuariosok_Load);
             this.panel1.ResumeLayout(false);
@@ -808,6 +834,8 @@ namespace PUNTO_VENTA_CSHARP
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label lblnumeroicono;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private System.Windows.Forms.Label lblId_usuarrio;
     }
 }
 
